@@ -1,0 +1,56 @@
+@mixin flex-center($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flex($justify, $align: false, $direction: false) {
+  display: flex !important;
+  justify-content: $justify !important;
+  @if $align {
+    align-items: $align !important;
+  }
+  @if $direction {
+    flex-direction: $direction !important;
+  }
+}
+
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font($size, $weight: false) {
+  font-size: $size !important;
+  @if $weight {
+    font-weight: $weight !important;
+  }
+}
+
+@mixin button {
+  height: 4rem !important;
+  background: #476cc7  !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 63px !important;
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  &:hover {
+    background: #fff !important;
+    color: $dark-blue !important;
+    // background: lighten($dark-blue, 10%) !important;
+  }
+}
+
+@mixin rotate-animation {
+  -webkit-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+  -webkit-transform: rotate(-360deg);
+  -ms-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}

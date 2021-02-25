@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+/* ********** COLORS ********** */
+$main:#3c5dae;;
+$black:#000000;
+$white:#ffffff;
+$grey:#959595;
+
+*{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: $black;
+    font-weight: 400;
+    max-width: 100%;
+}
+
+/* ********** FONT COLOR ********** */
+.c-white{
+    color: $white;
+}
+.c-main{
+    color: $main;
+}
+
+.c-grey{
+    color: $grey;
+}
+/* ********** FONT SIZE ********** */
+
+/*46px*/
+.jumbo{
+    font-size: 2.875rem!important;
+    line-height: 4.3125rem!important;
+}
+
+/*40px*/
+.h1{
+    font-size: 2.5rem!important;
+    line-height: 3.75rem!important;
+}
+
+/*36px*/
+.h2{
+    font-size: 2.25rem!important;
+    line-height: 3.375rem!important;
+}
+/*34px*/
+.h3{
+    font-size: 2.125rem!important;
+    line-height: 3.1875rem!important;
+}
+/*30px*/
+.h4{
+    font-size: 1.875rem!important;
+    line-height: 2.8125rem!important;
+}
+    /*24 px*/
+.h5{
+    font-size: 1.5rem!important;
+    line-height: 2.25rem!important;
+}
+    /*18 px*/
+.p1{
+    font-size: 1.125rem!important;
+    line-height: 1.875rem!important;
+}
+    /*14 px*/
+.p2{ 
+    font-size: 0.875rem!important;
+    line-height: 1.3125rem!important;
+}
+     /*12 px*/
+.p3{
+    font-size: 0.75rem!important;
+    line-height: 1.125rem!important;
+}
+/* 10 px*/
+.p4{
+    font-size: 0.625rem!important;
+    line-height: 0.9375rem!important;
+}
+    /*9 px*/
+.p5{
+    font-size: 0.5625rem!important;
+    line-height: 0.8125rem!important;
+}
+/* ********** FONT WEIGHT ********** */
+.fw-700{
+    font-weight: 700!important;
+}
+.fw-500{
+    font-weight: 500!important;
+}
+.fw-300{
+    font-weight: 300!important;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 0!important;
+   display: none!important;
+}
+
+input:focus{
+    outline: none!important;
+}
+select:focus{
+    outline: none!important;
+}
+button:focus{
+    outline: none!important;
+}
+
+.cursor{
+    :hover{
+        cursor: pointer;
+    }
+}

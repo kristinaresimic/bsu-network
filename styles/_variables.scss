@@ -1,0 +1,150 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+@import "./mixins.scss";
+
+$dark-blue: #3c5dae;
+$dark-blue-secondary: #0071bb;
+$black-main: #000000;
+$white-main: #ffffff;
+$blue-linear-gradient: linear-gradient(
+  180deg,
+  #6a87ce 0%,
+  $dark-blue-secondary 73.53%
+);
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-size: 100%;
+  font-weight: 400;
+  color: $black-main;
+}
+body {
+  max-width: 100% !important;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+a:hover {
+  cursor: pointer;
+  text-decoration: none !important;
+  color: darken($dark-blue, 30%) !important;
+}
+button:focus {
+  outline: none !important;
+}
+
+/* ----------------------------- TEXT COLOR STYLES ----------------------------- */
+.c-black {
+  color: $black-main !important;
+}
+.c-white {
+  color: $white-main !important;
+}
+.c-blue {
+  color: $dark-blue !important;
+}
+/* ----------------------------- FONT WEIGHT STYLES ----------------------------- */
+.fw-300 {
+  font-weight: 300 !important;
+}
+.fw-400 {
+  font-weight: 400 !important;
+}
+.fw-500 {
+  font-weight: 600 !important;
+}
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+/* ----------------------------- FONT SIZE STYLES ----------------------------- */
+/* --------- headings --------- */
+.h1 {
+  font-size: 3.375rem !important;
+  line-height: 4.725rem !important;
+}
+
+.h2 {
+  font-size: 3rem !important;
+  line-height: 3.8rem !important;
+}
+.h3 {
+  font-size: 1.625rem !important;
+  line-height: 2, 275rem !important;
+}
+
+/* --------- paragraphs --------- */
+.p1 {
+  font-size: 1.375rem !important;
+  line-height: 1.925rem !important;
+}
+.p2 {
+  font-size: 1.25rem !important;
+  line-height: 1.625rem !important;
+}
+.p3 {
+  font-size: 1rem !important;
+  line-height: 1.4rem !important;
+}
+.p4 {
+  font-size: 0.875rem !important;
+  line-height: 1.225rem !important;
+}
+
+/* ----------------------------- DIV STYLES ----------------------------- */
+
+.bg-white {
+  background-color: $white-main;
+}
+// .bg-cyan {
+//   background-color: $cyan-main;
+// }
+
+// .bg-cyan-gradient {
+//   background: $cyan-linear-gradient;
+// }
+
+.flex-center-r {
+  @include flex-center(row);
+}
+.flex-center-c {
+  @include flex-center(column);
+}
+.full-section {
+  min-width: 100% !important;
+  min-height: 100vh !important;
+  position: relative;
+}
+
+.input-border-bottom {
+  background: none;
+  border: none;
+  border-bottom: 2px solid $white-main;
+  min-height: 6rem;
+  font-size: 2rem;
+  color: $white-main;
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  height: 65px !important;
+  background: #0071bb !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 63px !important;
+  color: white !important;
+}
+
+.bg-blue {
+  background: #3c5dae;
+  height: 5.6875rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (min-width: 0px) and (max-width: 575px) {
+    height: auto;
+  }
+}

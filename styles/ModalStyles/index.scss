@@ -1,0 +1,583 @@
+@import "./variables.scss";
+//only way to import datapicker styles to project
+@import "../../node_modules/react-datepicker/dist/react-datepicker.css";
+//import styles for phone number
+@import "../../node_modules/react-phone-input-2/lib/style.css";
+
+/* ********** LAYOUT ********** */
+.modal--content {
+  .layout {
+    .tooltipText {
+      color: #3c5dae;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.45);
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    &-top {
+      &-navbar {
+        width: 100%;
+        background-color: $main;
+        height: 100px;
+
+        &-right {
+          & p {
+            text-decoration-line: underline;
+            text-align: right;
+          }
+        }
+
+        &-title {
+          width: 100px;
+
+          & p {
+            position: absolute;
+            min-width: 80px;
+            text-align: center;
+            align-items: center;
+          }
+        }
+
+        &-line {
+          height: 9.68px;
+          flex: 2;
+        }
+
+        &-checkpoint {
+          width: 100px;
+          height: 100.15px;
+          border-radius: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          & img {
+            width: 50px;
+            height: 50px;
+          }
+
+          & p {
+            margin-top: 8rem !important;
+          }
+        }
+      }
+    }
+
+    &-content {
+      // min-height: 70vh;
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80px;
+      width: 85%;
+      margin: auto;
+      text-align: center;
+      flex-direction: column;
+
+      &-error-mes {
+        color: red;
+        margin-bottom: 5px;
+      }
+
+      &-row {
+        min-height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      & button {
+        width: 166px;
+        height: 37px;
+        background: $main;
+        border-radius: 5px;
+      }
+
+      &-page {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: space-around;
+        width: 100px;
+
+        & p {
+          margin: 10px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  /* ********** requirements ********** */
+
+  .requirements {
+    &-part {
+      & label {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+    }
+
+    &-item {
+      ul li {
+        list-style: none;
+        /* if you’re not already using a reset */
+      }
+
+      ul li:before {
+        color: $main;
+        /* set color to red */
+        content: "\25AA";
+        /* /2022 is the numerical unicode for &bull; */
+        font-size: 2.9em;
+        /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+        padding-right: 0.25em;
+        /* give the bullet some padding from the text Make sure to use em*/
+        position: relative;
+        top: 0.2em;
+        /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+        text-align: center;
+      }
+
+      &-checkbox {
+        width: 15px;
+        height: 15px;
+        -webkit-box-shadow: 0px 0px 0px 1px white;
+        -moz-box-shadow: 0px 0px 0px 1px white;
+        box-shadow: 0px 0px 0px 1px white;
+        margin-bottom: 5px;
+
+        &-layout {
+          border: solid 1px red;
+          min-width: 26px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-top: 3px;
+        }
+      }
+    }
+  }
+
+  /* ********** MASTERNODE ********** */
+
+  .masternode {
+    margin: auto;
+
+    &-bsu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+
+      &-mbD {
+        width: 141px;
+        height: 50px;
+        background: $main;
+
+        &-img {
+          width: 10px !important;
+          height: 15px !important;
+
+          &:nth-child(1) {
+            transform: rotate(-90deg);
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
+          &-down {
+            transform: rotate(90deg);
+            width: 10px !important;
+            height: 15px !important;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      &-dolar {
+        width: 141px;
+        height: 50px;
+        background: $white;
+        box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &-input {
+          min-width: 10%;
+          width: 75%;
+        }
+      }
+    }
+
+    & img {
+      display: flex;
+      width: 40%;
+    }
+  }
+
+  /* ********** USER ********** */
+  .user {
+    .border-error {
+      border: 1px solid #3c5dae !important;
+    }
+
+    &-inp {
+      border: solid 1px $main !important;
+      height: 43px;
+      width: 100% !important;
+      background-color: white;
+
+      &-date {
+        height: 40px;
+        width: 100%;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &-inp-error {
+      border: solid 1px red !important;
+    }
+
+    &-phone {
+      height: 43px;
+      border: solid 1px $main !important;
+      padding-left: 0;
+
+      input {
+        height: 42px;
+        width: 100% !important;
+        border: none;
+        background: transparent;
+        outline: none;
+ 
+       
+        &:active,
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+
+      .flag-dropdown {
+        background: none;
+        border: none;
+      }
+
+      .country-dropdown {
+        width: 100%;
+        position: relative;
+      }
+    }
+
+    &-content {
+      min-height: 50vh;
+    }
+
+    &-dataPicker {
+      height: 27px;
+      border: solid 1px $main !important;
+      background-color: white;
+    }
+
+    &-proof {
+      &-content {
+        min-height: 150px;
+      }
+
+      & button {
+        width: 108px;
+        height: 26px;
+        background: $main;
+      }
+
+      &-import {
+        width: 70%;
+        height: 233px;
+        overflow: hidden;
+
+        &-check {
+          width: 100px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          list-style: none;
+        }
+
+        &-img {
+          overflow: hidden;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+          }
+        }
+      }
+
+      &-upload {
+        &-btn {
+          height: 30px !important;
+        }
+
+        & div {
+          width: 108px;
+          height: 26px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-device-width: 1366px) and (max-device-width: 1919px) {
+    * {
+      font-size: 13px !important;
+    }
+
+    .layout {
+      &-top {
+        &-navbar {
+          & h5 {
+            font-size: 1.8rem !important;
+          }
+
+          & p {
+            font-size: 1.5rem !important;
+          }
+        }
+      }
+    }
+
+    .masternode {
+      &-img {
+        width: 65% !important;
+      }
+    }
+
+    .finish {
+      &-img {
+        width: 30% !important;
+      }
+    }
+
+    .user {
+      &-proof {
+        &-content {
+          min-height: 120px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1365px) {
+    * {
+      font-size: 12px !important;
+    }
+
+    .layout {
+      &-top {
+        &-navbar {
+          & h5 {
+            font-size: 1.8rem !important;
+          }
+
+          & p {
+            font-size: 1.5rem !important;
+          }
+        }
+      }
+    }
+
+    .masternode {
+      &-bsu {
+        &-mbD {
+          width: 137px;
+          height: 50px;
+        }
+
+        &-dolar {
+          width: 137px;
+          height: 50px;
+        }
+      }
+
+      & img {
+        width: 40%;
+      }
+    }
+
+    .finish {
+      &-img {
+        width: 50% !important;
+      }
+    }
+
+    .user {
+      &-proof {
+        &-content {
+          min-height: 130px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    * {
+      font-size: 10.5px !important;
+    }
+
+    .layout {
+      &-top {
+        &-navbar {
+          & h5 {
+            font-size: 1.8rem !important;
+          }
+
+          & p {
+            font-size: 1.5rem !important;
+          }
+        }
+      }
+    }
+
+    .masternode {
+      &-bottom {
+        display: flex;
+        justify-content: center;
+      }
+
+      &-img {
+        width: 85% !important;
+      }
+    }
+
+    .finish {
+      &-img {
+        width: 70% !important;
+      }
+    }
+
+    .user {
+      &-proof {
+        &-content {
+          min-height: 50px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    * {
+      font-size: 11px !important;
+    }
+
+    .layout {
+      &-top {
+        &-navbar {
+          & h5 {
+            font-size: 1.8rem !important;
+          }
+
+          & p {
+            font-size: 1.5rem !important;
+          }
+        }
+      }
+    }
+
+    .masternode {
+      &-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &-img {
+        width: 90% !important;
+      }
+    }
+
+    .finish {
+      &-img {
+        width: 80% !important;
+      }
+    }
+
+    .user {
+      &-proof {
+        &-content {
+          min-height: 50px;
+        }
+
+        &-import {
+          width: 95%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 575px) {
+    * {
+      font-size: 11.5px !important;
+    }
+
+    .layout {
+      &-top {
+        &-navbar {
+          & h5 {
+            font-size: 1.1rem !important;
+          }
+        }
+      }
+    }
+
+    .masternode {
+      &-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &-img {
+        width: 90% !important;
+      }
+    }
+
+    .finish {
+      &-img {
+        width: 90% !important;
+      }
+    }
+
+    .user {
+      &-proof {
+        &-content {
+          min-height: 50px;
+        }
+
+        &-import {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
